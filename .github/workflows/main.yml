@@ -1,0 +1,19 @@
+name: First Workglow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Print a welcome message
+        run: echo "Welcome to our first GitHub actions workflow"
+
+      - name: Checkout repository 
+        uses: actions/checkout@v4.2.2
+
+      - name: List working-directory: 
+        run: ls -la 
+        
