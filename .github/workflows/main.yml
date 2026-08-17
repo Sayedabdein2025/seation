@@ -14,6 +14,6 @@ jobs:
       - name: Checkout repository 
         uses: actions/checkout@v4.2.2
 
-      - name: List working-directory: 
+      - name: List working-directory
         run: ls -la 
         
