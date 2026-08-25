@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Run Tests
 
 on:
   push:
@@ -10,6 +10,7 @@ on:
 
 jobs:
   test:
+    name: Run Jest Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -20,9 +21,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Tests
         run: npm test
